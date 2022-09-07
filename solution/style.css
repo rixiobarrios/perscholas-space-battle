@@ -1,0 +1,168 @@
+.bodyContainer{
+    display: flex;
+   
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+    font-family: 'Share Tech Mono', monospace;
+    background-size: 100%;
+    background-color: black;
+    color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mainCharacterView{
+
+width: 40%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+.left{
+
+}
+.right{
+    
+}
+
+.bullet-container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    width: 20%;
+
+}
+
+.bullet{
+    width: 100vw;
+    height: 10%;
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nameBox{
+    border: 1px solid black;
+    width: 25vw;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    box-shadow: 0px 0px 20px 10px white;
+
+}
+.playerImage{
+    border: 1px solidblack;
+    width: 30vw;
+    height: 40vh;
+    background-image: url("/images/space_hero.gif");
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 20px 10px white;
+ 
+}
+.playerStats{
+    display: flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+    border: 1px solidblack;
+    width: 15vw;
+    height: 15vh;
+    text-align: center;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 20px 10px white;
+    border-radius: 2%;
+
+
+}
+.enemyImage{
+    border: 1px solidblack;
+    width: 30vw;
+    height: 35vh;
+    background-image: url("/images/enemy.gif");
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 20px 10px white;
+    
+
+    
+}
+.enemyStats{
+    display: flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+    border: 1px solidblack;
+    width: 15vw;
+    height: 15vh;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 20px 10px white;
+
+}
+
+.shake {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: 1;
+  }
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.rotateEnemyImage {
+    -webkit-animation: rotateOnY .5s 1 linear;
+            animation: rotateOnY .5s 1 linear;
+  }
+
+  @-webkit-keyframes rotateOnY {
+    to {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+  
+  @keyframes rotateOnY {
+    to {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+  }
+
+/* Fade-In Effect */
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+/* Fade-Out Effect */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .2s, opacity 1s linear;
+}
